@@ -108,6 +108,10 @@ const Login = () => {
             Don't have an account?{" "}
             <a href="#" className="text-primary font-medium hover:underline">Contact your institution</a>
           </p>
+          <p className="text-center text-sm text-muted-foreground mt-3">
+            Referred by an alumni?{" "}
+            <a href="/referred" className="text-primary font-medium hover:underline">Register with referral code</a>
+          </p>
         </div>
       </div>
     </div>
