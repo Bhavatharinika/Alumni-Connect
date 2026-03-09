@@ -10,8 +10,16 @@ const projects = [
   { name: "E-commerce Microservices", tech: "Go, gRPC, Kubernetes", year: "2021" },
 ];
 
+const REFERRAL_CODE = "ALUMNI-NC-1023";
+const REFERRAL_LINK = "nandha-alumni/ref/ARC1023";
+
 const AlumniProfile = () => {
-  return (
+  const { toast } = useToast();
+
+  const copyReferralCode = () => {
+    navigator.clipboard.writeText(REFERRAL_CODE);
+    toast({ title: "Copied!", description: "Referral code copied to clipboard." });
+  };
     <div className="min-h-screen bg-background">
       {/* Header */}
       <div className="gradient-hero pt-20 pb-24 relative overflow-hidden">
