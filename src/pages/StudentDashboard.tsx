@@ -1,9 +1,11 @@
 import DashboardLayout from "@/components/DashboardLayout";
-import { LayoutDashboard, User, Users, Calendar, Briefcase, FileText, BarChart3 } from "lucide-react";
+import { LayoutDashboard, User, Users, Calendar, Briefcase, FileText, Sparkles } from "lucide-react";
 import { Routes, Route } from "react-router-dom";
+import ForYou from "./ForYou";
 
 const navItems = [
   { label: "Dashboard", href: "/student", icon: LayoutDashboard },
+  { label: "For You", href: "/student/for-you", icon: Sparkles },
   { label: "My Mentor", href: "/student/mentor", icon: User },
   { label: "Sessions", href: "/student/sessions", icon: Calendar },
   { label: "Job Opportunities", href: "/student/jobs", icon: Briefcase },
@@ -22,7 +24,7 @@ const DashboardOverview = () => (
       {[
         { label: "Assigned Mentor", value: "Dr. Ankit Raj", sub: "SDE Lead, Google", icon: User, accent: "bg-primary/10 text-primary" },
         { label: "Next Session", value: "Mar 12, 3 PM", sub: "Career Planning", icon: Calendar, accent: "bg-violet/10 text-violet" },
-        { label: "Skills Progress", value: "78%", sub: "12 of 15 milestones", icon: BarChart3, accent: "bg-teal/10 text-teal" },
+        { label: "Skills Progress", value: "78%", sub: "12 of 15 milestones", icon: Sparkles, accent: "bg-teal/10 text-teal" },
         { label: "Open Opportunities", value: "14", sub: "5 new this week", icon: Briefcase, accent: "bg-primary/10 text-primary" },
       ].map((card) => (
         <div key={card.label} className="stat-card">
@@ -38,7 +40,6 @@ const DashboardOverview = () => (
       ))}
     </div>
 
-    {/* Recent Activity */}
     <div className="glass-card-elevated rounded-2xl p-6">
       <h3 className="text-lg font-semibold text-foreground mb-4">Recent Activity</h3>
       <div className="space-y-4">
@@ -72,6 +73,7 @@ const StudentDashboard = () => {
     <DashboardLayout navItems={navItems} role="Student Portal">
       <Routes>
         <Route index element={<DashboardOverview />} />
+        <Route path="for-you" element={<ForYou />} />
         <Route path="mentor" element={<Placeholder title="My Mentor" />} />
         <Route path="sessions" element={<Placeholder title="Sessions" />} />
         <Route path="jobs" element={<Placeholder title="Job Opportunities" />} />

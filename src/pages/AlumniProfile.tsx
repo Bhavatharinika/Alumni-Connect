@@ -56,6 +56,27 @@ const AlumniProfile = () => {
               </div>
             </div>
 
+            {/* Referral Code Card */}
+            <div className="glass-card-elevated rounded-2xl p-6 space-y-3">
+              <h3 className="text-sm font-semibold text-foreground flex items-center gap-2">
+                <Share2 className="h-4 w-4 text-primary" /> Your Referral Code
+              </h3>
+              <div className="flex items-center gap-2">
+                <div className="flex-1 bg-secondary rounded-xl px-4 py-3 font-mono text-sm font-bold text-foreground tracking-wider">
+                  {REFERRAL_CODE}
+                </div>
+                <Button size="icon" variant="outline" className="shrink-0 rounded-xl" onClick={copyReferralCode}>
+                  <Copy className="h-4 w-4" />
+                </Button>
+              </div>
+              <p className="text-xs text-muted-foreground">
+                Share this code with friends so they can post job opportunities on your behalf.
+              </p>
+              <div className="text-xs text-muted-foreground bg-secondary/50 rounded-lg px-3 py-2">
+                Referral link: <span className="text-primary font-medium">{REFERRAL_LINK}</span>
+              </div>
+            </div>
+
             {/* Stats */}
             <div className="glass-card-elevated rounded-2xl p-6 space-y-4">
               {[
