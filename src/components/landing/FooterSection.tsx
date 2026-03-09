@@ -12,7 +12,7 @@ const FooterSection = () => {
             <span className="text-sm font-semibold text-foreground">Nandha's AlumniConnect</span>
           </div>
           <p className="text-sm text-muted-foreground">
-            © 2026 Alumni Mentorship & Placement Network. All rights reserved.
+            © 2026 Nandha's AlumniConnect — Alumni Mentorship & Placement Network. All rights reserved.
           </p>
         </div>
       </div>

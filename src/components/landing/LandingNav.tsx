@@ -10,7 +10,7 @@ const LandingNav = () => {
           <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary shadow-sm">
             <GraduationCap className="h-5 w-5 text-primary-foreground" />
           </div>
-          <span className="text-lg font-bold text-foreground tracking-tight">AlumniConnect</span>
+          <span className="text-lg font-bold text-foreground tracking-tight">Nandha's AlumniConnect</span>
         </Link>
 
         <div className="hidden md:flex items-center gap-8">

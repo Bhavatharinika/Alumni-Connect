@@ -38,7 +38,7 @@ const Login = () => {
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary-foreground/10 backdrop-blur-sm">
               <GraduationCap className="h-6 w-6 text-primary-foreground" />
             </div>
-            <span className="text-xl font-bold text-primary-foreground">AlumniConnect</span>
+            <span className="text-xl font-bold text-primary-foreground">Nandha's AlumniConnect</span>
           </div>
           <h2 className="text-3xl font-bold text-primary-foreground mb-4">
             Start your mentorship journey today
