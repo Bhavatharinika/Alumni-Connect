@@ -19,6 +19,7 @@ const AlumniProfile = () => {
   const copyReferralCode = () => {
     navigator.clipboard.writeText(REFERRAL_CODE);
     toast({ title: "Copied!", description: "Referral code copied to clipboard." });
+  };
 
   return (
     <div className="min-h-screen bg-background">
