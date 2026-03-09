@@ -28,7 +28,7 @@ const DashboardLayout = ({ children, navItems, role }: DashboardLayoutProps) => 
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-sidebar-primary">
             <GraduationCap className="h-4 w-4 text-sidebar-primary-foreground" />
           </div>
-          <span className="text-sm font-bold text-sidebar-primary-foreground">AlumniConnect</span>
+          <span className="text-sm font-bold text-sidebar-primary-foreground">Nandha's AlumniConnect</span>
         </div>
 
         <div className="px-3 mb-2">

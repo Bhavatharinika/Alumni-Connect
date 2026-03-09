@@ -38,7 +38,7 @@ const Login = () => {
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary-foreground/10 backdrop-blur-sm">
               <GraduationCap className="h-6 w-6 text-primary-foreground" />
             </div>
-            <span className="text-xl font-bold text-primary-foreground">AlumniConnect</span>
+            <span className="text-xl font-bold text-primary-foreground">Nandha's AlumniConnect</span>
           </div>
           <h2 className="text-3xl font-bold text-primary-foreground mb-4">
             Start your mentorship journey today
@@ -107,6 +107,10 @@ const Login = () => {
           <p className="text-center text-sm text-muted-foreground mt-6">
             Don't have an account?{" "}
             <a href="#" className="text-primary font-medium hover:underline">Contact your institution</a>
+          </p>
+          <p className="text-center text-sm text-muted-foreground mt-3">
+            Referred by an alumni?{" "}
+            <a href="/referred" className="text-primary font-medium hover:underline">Register with referral code</a>
           </p>
         </div>
       </div>

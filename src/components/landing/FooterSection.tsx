@@ -9,10 +9,10 @@ const FooterSection = () => {
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
               <GraduationCap className="h-4 w-4 text-primary-foreground" />
             </div>
-            <span className="text-sm font-semibold text-foreground">AlumniConnect</span>
+            <span className="text-sm font-semibold text-foreground">Nandha's AlumniConnect</span>
           </div>
           <p className="text-sm text-muted-foreground">
-            © 2026 Alumni Mentorship & Placement Network. All rights reserved.
+            © 2026 Nandha's AlumniConnect — Alumni Mentorship & Placement Network. All rights reserved.
           </p>
         </div>
       </div>

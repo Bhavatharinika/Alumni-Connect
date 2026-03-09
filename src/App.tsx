@@ -11,6 +11,8 @@ import FacultyDashboard from "./pages/FacultyDashboard";
 import AlumniProfile from "./pages/AlumniProfile";
 import MentorshipSessions from "./pages/MentorshipSessions";
 import JobOpportunities from "./pages/JobOpportunities";
+import ReferredLogin from "./pages/ReferredLogin";
+import ReferredDashboard from "./pages/ReferredDashboard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +26,8 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/referred" element={<ReferredLogin />} />
+          <Route path="/referred/dashboard/*" element={<ReferredDashboard />} />
           <Route path="/student/*" element={<StudentDashboard />} />
           <Route path="/alumni/*" element={<AlumniDashboard />} />
           <Route path="/faculty/*" element={<FacultyDashboard />} />
