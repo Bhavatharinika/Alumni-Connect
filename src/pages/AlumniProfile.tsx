@@ -1,6 +1,7 @@
-import { MapPin, Briefcase, GraduationCap, Mail, Calendar, Star, Award, BookOpen } from "lucide-react";
+import { MapPin, Briefcase, GraduationCap, Mail, Calendar, Star, Award, BookOpen, Copy, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useToast } from "@/hooks/use-toast";
 
 const skills = ["React.js", "Node.js", "System Design", "Data Structures", "Machine Learning", "Cloud Architecture"];
 const projects = [
