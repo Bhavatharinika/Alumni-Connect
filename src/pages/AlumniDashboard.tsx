@@ -116,7 +116,8 @@ const AlumniOverview = () => {
       </div>
     </div>
   </div>
-);
+  );
+};
 
 const PostJobForm = () => (
   <div className="max-w-2xl mx-auto">
