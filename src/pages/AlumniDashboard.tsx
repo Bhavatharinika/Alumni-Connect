@@ -1,7 +1,11 @@
 import DashboardLayout from "@/components/DashboardLayout";
-import { LayoutDashboard, Users, Calendar, Star, Briefcase, User } from "lucide-react";
+import { LayoutDashboard, Users, Calendar, Star, Briefcase, User, Copy, Share2 } from "lucide-react";
 import { Routes, Route, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { useToast } from "@/hooks/use-toast";
+
+const REFERRAL_CODE = "ALUMNI-NC-1023";
+const REFERRAL_LINK = "nandha-alumni/ref/ARC1023";
 
 const navItems = [
   { label: "Dashboard", href: "/alumni", icon: LayoutDashboard },
