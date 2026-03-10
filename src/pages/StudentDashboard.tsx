@@ -1,11 +1,13 @@
 import DashboardLayout from "@/components/DashboardLayout";
-import { LayoutDashboard, User, Users, Calendar, Briefcase, FileText, Sparkles } from "lucide-react";
+import { LayoutDashboard, User, Users, Calendar, Briefcase, FileText, Sparkles, Video } from "lucide-react";
 import { Routes, Route } from "react-router-dom";
 import ForYou from "./ForYou";
+import VideoLectures from "./VideoLectures";
 
 const navItems = [
   { label: "Dashboard", href: "/student", icon: LayoutDashboard },
   { label: "For You", href: "/student/for-you", icon: Sparkles },
+  { label: "Video Lectures", href: "/student/lectures", icon: Video },
   { label: "My Mentor", href: "/student/mentor", icon: User },
   { label: "Sessions", href: "/student/sessions", icon: Calendar },
   { label: "Job Opportunities", href: "/student/jobs", icon: Briefcase },
