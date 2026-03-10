@@ -161,10 +161,13 @@ const AlumniDashboard = () => {
     <DashboardLayout navItems={navItems} role="Alumni Portal">
       <Routes>
         <Route index element={<AlumniOverview />} />
-        <Route path="profile" element={<Placeholder title="My Profile" />} />
+        <Route path="profile" element={<AlumniProfileEdit />} />
+        <Route path="lectures" element={<VideoLectures />} />
+        <Route path="upload-lecture" element={<UploadLecture />} />
         <Route path="mentees" element={<Placeholder title="My Mentees" />} />
         <Route path="sessions" element={<Placeholder title="Sessions" />} />
         <Route path="reviews" element={<Placeholder title="Reviews" />} />
+        <Route path="invitations" element={<WorkshopInvitations />} />
         <Route path="post-job" element={<PostJobForm />} />
       </Routes>
     </DashboardLayout>

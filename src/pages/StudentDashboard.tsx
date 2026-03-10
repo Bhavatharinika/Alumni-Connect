@@ -76,6 +76,7 @@ const StudentDashboard = () => {
       <Routes>
         <Route index element={<DashboardOverview />} />
         <Route path="for-you" element={<ForYou />} />
+        <Route path="lectures" element={<VideoLectures />} />
         <Route path="mentor" element={<Placeholder title="My Mentor" />} />
         <Route path="sessions" element={<Placeholder title="Sessions" />} />
         <Route path="jobs" element={<Placeholder title="Job Opportunities" />} />

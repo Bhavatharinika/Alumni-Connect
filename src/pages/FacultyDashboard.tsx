@@ -107,6 +107,7 @@ const FacultyDashboard = () => {
       <Routes>
         <Route index element={<FacultyOverview />} />
         <Route path="students" element={<Placeholder title="Students" />} />
+        <Route path="resource-person" element={<FindResourcePerson />} />
         <Route path="analytics" element={<Placeholder title="Analytics" />} />
         <Route path="reviews" element={<Placeholder title="Reviews" />} />
         <Route path="settings" element={<Placeholder title="Settings" />} />
