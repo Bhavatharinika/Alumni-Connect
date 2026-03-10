@@ -1,10 +1,12 @@
 import DashboardLayout from "@/components/DashboardLayout";
-import { LayoutDashboard, Users, BarChart3, ClipboardList, Settings } from "lucide-react";
+import { LayoutDashboard, Users, BarChart3, ClipboardList, Settings, Search } from "lucide-react";
 import { Routes, Route } from "react-router-dom";
+import FindResourcePerson from "./FindResourcePerson";
 
 const navItems = [
   { label: "Dashboard", href: "/faculty", icon: LayoutDashboard },
   { label: "Students", href: "/faculty/students", icon: Users },
+  { label: "Find Resource Person", href: "/faculty/resource-person", icon: Search },
   { label: "Analytics", href: "/faculty/analytics", icon: BarChart3 },
   { label: "Reviews", href: "/faculty/reviews", icon: ClipboardList },
   { label: "Settings", href: "/faculty/settings", icon: Settings },
