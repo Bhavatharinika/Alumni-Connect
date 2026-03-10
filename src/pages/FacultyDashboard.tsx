@@ -1,10 +1,12 @@
 import DashboardLayout from "@/components/DashboardLayout";
-import { LayoutDashboard, Users, BarChart3, ClipboardList, Settings } from "lucide-react";
+import { LayoutDashboard, Users, BarChart3, ClipboardList, Settings, Search } from "lucide-react";
 import { Routes, Route } from "react-router-dom";
+import FindResourcePerson from "./FindResourcePerson";
 
 const navItems = [
   { label: "Dashboard", href: "/faculty", icon: LayoutDashboard },
   { label: "Students", href: "/faculty/students", icon: Users },
+  { label: "Find Resource Person", href: "/faculty/resource-person", icon: Search },
   { label: "Analytics", href: "/faculty/analytics", icon: BarChart3 },
   { label: "Reviews", href: "/faculty/reviews", icon: ClipboardList },
   { label: "Settings", href: "/faculty/settings", icon: Settings },
@@ -105,6 +107,7 @@ const FacultyDashboard = () => {
       <Routes>
         <Route index element={<FacultyOverview />} />
         <Route path="students" element={<Placeholder title="Students" />} />
+        <Route path="resource-person" element={<FindResourcePerson />} />
         <Route path="analytics" element={<Placeholder title="Analytics" />} />
         <Route path="reviews" element={<Placeholder title="Reviews" />} />
         <Route path="settings" element={<Placeholder title="Settings" />} />

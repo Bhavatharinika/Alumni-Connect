@@ -1,8 +1,12 @@
 import DashboardLayout from "@/components/DashboardLayout";
-import { LayoutDashboard, Users, Calendar, Star, Briefcase, User, Copy, Share2 } from "lucide-react";
+import { LayoutDashboard, Users, Calendar, Star, Briefcase, User, Copy, Share2, Video, Upload, Bell } from "lucide-react";
 import { Routes, Route, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
+import VideoLectures from "./VideoLectures";
+import UploadLecture from "./UploadLecture";
+import WorkshopInvitations from "./WorkshopInvitations";
+import AlumniProfileEdit from "./AlumniProfileEdit";
 
 const REFERRAL_CODE = "ALUMNI-NC-1023";
 const REFERRAL_LINK = "nandha-alumni/ref/ARC1023";
@@ -10,9 +14,12 @@ const REFERRAL_LINK = "nandha-alumni/ref/ARC1023";
 const navItems = [
   { label: "Dashboard", href: "/alumni", icon: LayoutDashboard },
   { label: "My Profile", href: "/alumni/profile", icon: User },
+  { label: "Video Lectures", href: "/alumni/lectures", icon: Video },
+  { label: "Upload Lecture", href: "/alumni/upload-lecture", icon: Upload },
   { label: "My Mentees", href: "/alumni/mentees", icon: Users },
   { label: "Sessions", href: "/alumni/sessions", icon: Calendar },
   { label: "Reviews", href: "/alumni/reviews", icon: Star },
+  { label: "Workshop Invites", href: "/alumni/invitations", icon: Bell },
   { label: "Post Job", href: "/alumni/post-job", icon: Briefcase },
 ];
 
@@ -154,10 +161,13 @@ const AlumniDashboard = () => {
     <DashboardLayout navItems={navItems} role="Alumni Portal">
       <Routes>
         <Route index element={<AlumniOverview />} />
-        <Route path="profile" element={<Placeholder title="My Profile" />} />
+        <Route path="profile" element={<AlumniProfileEdit />} />
+        <Route path="lectures" element={<VideoLectures />} />
+        <Route path="upload-lecture" element={<UploadLecture />} />
         <Route path="mentees" element={<Placeholder title="My Mentees" />} />
         <Route path="sessions" element={<Placeholder title="Sessions" />} />
         <Route path="reviews" element={<Placeholder title="Reviews" />} />
+        <Route path="invitations" element={<WorkshopInvitations />} />
         <Route path="post-job" element={<PostJobForm />} />
       </Routes>
     </DashboardLayout>
