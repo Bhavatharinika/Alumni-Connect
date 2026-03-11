@@ -30,6 +30,7 @@ const App = () => (
           <Route path="/referred" element={<ReferredLogin />} />
           <Route path="/referred/dashboard/*" element={<ReferredDashboard />} />
           <Route path="/student/*" element={<StudentDashboard />} />
+          <Route path="/alumni/setup" element={<AlumniProfileSetup />} />
           <Route path="/alumni/*" element={<AlumniDashboard />} />
           <Route path="/faculty/*" element={<FacultyDashboard />} />
           <Route path="/alumni-profile" element={<AlumniProfile />} />

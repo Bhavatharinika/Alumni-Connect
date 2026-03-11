@@ -1,11 +1,13 @@
 import DashboardLayout from "@/components/DashboardLayout";
-import { LayoutDashboard, Users, BarChart3, ClipboardList, Settings, Search } from "lucide-react";
+import { LayoutDashboard, Users, BarChart3, ClipboardList, Settings, Search, BookUser } from "lucide-react";
 import { Routes, Route } from "react-router-dom";
 import FindResourcePerson from "./FindResourcePerson";
+import AlumniDirectory from "./AlumniDirectory";
 
 const navItems = [
   { label: "Dashboard", href: "/faculty", icon: LayoutDashboard },
   { label: "Students", href: "/faculty/students", icon: Users },
+  { label: "Alumni Directory", href: "/faculty/alumni-directory", icon: BookUser },
   { label: "Find Resource Person", href: "/faculty/resource-person", icon: Search },
   { label: "Analytics", href: "/faculty/analytics", icon: BarChart3 },
   { label: "Reviews", href: "/faculty/reviews", icon: ClipboardList },
@@ -42,7 +44,6 @@ const FacultyOverview = () => (
       ))}
     </div>
 
-    {/* Student performance table */}
     <div className="glass-card-elevated rounded-2xl overflow-hidden">
       <div className="p-6 border-b border-border/50">
         <h3 className="text-lg font-semibold text-foreground">Student Performance Overview</h3>
@@ -107,6 +108,7 @@ const FacultyDashboard = () => {
       <Routes>
         <Route index element={<FacultyOverview />} />
         <Route path="students" element={<Placeholder title="Students" />} />
+        <Route path="alumni-directory" element={<AlumniDirectory />} />
         <Route path="resource-person" element={<FindResourcePerson />} />
         <Route path="analytics" element={<Placeholder title="Analytics" />} />
         <Route path="reviews" element={<Placeholder title="Reviews" />} />
