@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Login from "./pages/Login";
 import StudentDashboard from "./pages/StudentDashboard";
 import AlumniDashboard from "./pages/AlumniDashboard";
+import AlumniProfileSetup from "./pages/AlumniProfileSetup";
 import FacultyDashboard from "./pages/FacultyDashboard";
 import AlumniProfile from "./pages/AlumniProfile";
 import MentorshipSessions from "./pages/MentorshipSessions";
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/referred" element={<ReferredLogin />} />
           <Route path="/referred/dashboard/*" element={<ReferredDashboard />} />
           <Route path="/student/*" element={<StudentDashboard />} />
+          <Route path="/alumni/setup" element={<AlumniProfileSetup />} />
           <Route path="/alumni/*" element={<AlumniDashboard />} />
           <Route path="/faculty/*" element={<FacultyDashboard />} />
           <Route path="/alumni-profile" element={<AlumniProfile />} />

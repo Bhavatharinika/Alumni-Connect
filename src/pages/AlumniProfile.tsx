@@ -1,9 +1,11 @@
-import { MapPin, Briefcase, GraduationCap, Mail, Calendar, Star, Award, BookOpen, Copy, Share2 } from "lucide-react";
+import { MapPin, Briefcase, GraduationCap, Mail, Calendar, Star, Award, BookOpen, Copy, Share2, FileText, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 
 const skills = ["React.js", "Node.js", "System Design", "Data Structures", "Machine Learning", "Cloud Architecture"];
+const availability = ["Mentoring", "Workshop", "Referral"];
 const projects = [
   { name: "Real-time Chat Platform", tech: "React, WebSocket, Redis", year: "2023" },
   { name: "ML-based Resume Screener", tech: "Python, TensorFlow, FastAPI", year: "2022" },
@@ -23,7 +25,6 @@ const AlumniProfile = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
       <div className="gradient-hero pt-20 pb-24 relative overflow-hidden">
         <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-primary/20 rounded-full blur-[100px]" />
         <div className="container mx-auto px-6 relative z-10">
@@ -50,10 +51,29 @@ const AlumniProfile = () => {
                 <span className="flex items-center gap-1"><GraduationCap className="h-3 w-3" /> Batch 2018</span>
               </div>
 
+              {/* Availability Badges */}
+              <div className="flex flex-wrap justify-center gap-1.5 mt-4">
+                {availability.map((a) => (
+                  <Badge key={a} variant="secondary" className="bg-accent/10 text-accent border-0 text-[11px]">
+                    {a}
+                  </Badge>
+                ))}
+              </div>
+
               <div className="flex gap-2 mt-6">
                 <Button size="sm" className="flex-1">Connect</Button>
                 <Button size="sm" variant="outline" className="flex-1">
                   <Mail className="h-3 w-3" /> Message
+                </Button>
+              </div>
+
+              {/* Resume */}
+              <div className="flex gap-2 mt-3">
+                <Button size="sm" variant="outline" className="flex-1 rounded-xl text-xs">
+                  <FileText className="h-3 w-3" /> View Resume
+                </Button>
+                <Button size="sm" variant="outline" className="flex-1 rounded-xl text-xs">
+                  <Download className="h-3 w-3" /> Download
                 </Button>
               </div>
             </div>
