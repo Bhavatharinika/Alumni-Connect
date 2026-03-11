@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Login from "./pages/Login";
 import StudentDashboard from "./pages/StudentDashboard";
 import AlumniDashboard from "./pages/AlumniDashboard";
+import AlumniProfileSetup from "./pages/AlumniProfileSetup";
 import FacultyDashboard from "./pages/FacultyDashboard";
 import AlumniProfile from "./pages/AlumniProfile";
 import MentorshipSessions from "./pages/MentorshipSessions";
