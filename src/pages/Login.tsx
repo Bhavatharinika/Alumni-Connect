@@ -20,7 +20,16 @@ const Login = () => {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    navigate(roleConfig[selectedRole].dashboard);
+    if (selectedRole === "alumni") {
+      const profileComplete = localStorage.getItem("alumniProfileComplete");
+      if (profileComplete === "true") {
+        navigate("/alumni");
+      } else {
+        navigate("/alumni/setup");
+      }
+    } else {
+      navigate(roleConfig[selectedRole].dashboard);
+    }
   };
 
   return (
